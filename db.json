@@ -1,0 +1,8 @@
+{
+    "sellers": [
+      { "id": 1, "name": "Seller One", "rating": 4, "review": "Good seller" },
+      { "id": 2, "name": "Seller Two", "rating": 5, "review": "Excellent seller" },
+      { "id": 3, "name": "Seller Three", "rating": 3, "review": "Decent service" }
+    ]
+  }
+  
