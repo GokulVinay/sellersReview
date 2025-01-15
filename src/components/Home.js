@@ -12,6 +12,7 @@ function Home() {
   const [search, setSearch] = useState('');
   const navigate = useNavigate();
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const fetchSellers = async () => {
     try {
       const response = await axios.get(`${BASE_URL}/api/sellers?name=${search}`);
@@ -23,11 +24,11 @@ function Home() {
 
   useEffect(() => {
     fetchSellers();
-  }, [search]);
+  }, [fetchSellers, search]);
 
   const handleLogout = () => {
     localStorage.removeItem('authToken');
-    navigate('/login');
+    navigate('/');
   };
 
   const renderStars = (rating) => {
